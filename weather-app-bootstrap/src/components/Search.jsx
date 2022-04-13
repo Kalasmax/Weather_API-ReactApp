@@ -1,5 +1,6 @@
 import{useState, useRef} from "react"
 import WeatherItem from "./WeatherItem";
+import { Form, Button } from "react-bootstrap"
 
 const API_KEY = "4d717a42ee8e57d713be619959ce81c6"
 
@@ -15,7 +16,7 @@ const Search = () => {
         // Hämtar värdet från textboxen (namn på stad)
         let city = searchValue.current.value;
 
-        let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric$&appid=${API_KEY}`
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric$&appid=${API_KEY}`
 
         fetch(url).then(response => response.json()).then(data => {
 
@@ -26,12 +27,16 @@ const Search = () => {
         }, []);
     };
 
-    return(<>
-                <label>Enter a city name:</label>
-                <input type="text" ref={searchValue} placeholder="e.g. Madrid" />
-                <button onClick={getSearchItem}>Sök</button>
-                <WeatherItem item={searchWeather} />
-            </>);
+    
+
+    return(
+    <>
+        <Form className="m-5">
+            <Form.Control onKeyDown={getSearchItem} style={{width: 350}} ref={searchValue} type="text" placeholder="City name" />     
+            <WeatherItem item={searchWeather} />     
+        </Form>
+    </>
+    );
 };
 
 export default Search;

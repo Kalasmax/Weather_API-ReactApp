@@ -1,8 +1,7 @@
 import {useState, useEffect} from "react"
-
-import { Navbar, Card } from "react-bootstrap"
+import { Navbar} from "react-bootstrap"
 import logo from "../../images/icon-nav.jpg"
-import Start from "../StartWeather"
+import Start from "../../views/StartWeather"
 
 const API_KEY = "4d717a42ee8e57d713be619959ce81c6"
 const startCity = "Stockholm"
@@ -37,14 +36,12 @@ const Header = () => {
                 height="60"
                 className="d-inline-block align-top"
             />{''}
-            <h2 className="m-2 d-inline-block align-bottom">theWeatherGuru</h2>
+            <h2 className="m-2 d-inline-block align-bottom" id="font-link">theWeatherGuru</h2>
         </Navbar.Brand>               
         </Navbar>
 
-        <Card>
-            <Card.Body> <Start item={startWeather}/>  </Card.Body>
-        </Card>
-        
+        <Start item={startWeather}/>
+           
     </>
     );
 

@@ -1,5 +1,5 @@
 import{useState, useRef} from "react"
-import WeatherItem from "./WeatherItem";
+import WeatherItem from "../../views/WeatherItem";
 import { Form, Button } from "react-bootstrap"
 
 const API_KEY = "4d717a42ee8e57d713be619959ce81c6"

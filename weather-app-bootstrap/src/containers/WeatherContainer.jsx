@@ -1,8 +1,9 @@
 import Header from "../components/Header/Header"
-import Search from "../components/Search"
+import Search from "../components/Searchbar/Search"
 
 // bootstrap
 import { Container } from "react-bootstrap"
+
 
 // CONTAINER
 const WeatherContainer = () => {
@@ -12,14 +13,13 @@ const WeatherContainer = () => {
     <>
         <Header/>
 
-        <Container style={{
-            justifyContent: "center"
-        }}>
+        <Container>
             
-
             <Search />
-        
+
         </Container>
+
+        
     </> 
 
     );

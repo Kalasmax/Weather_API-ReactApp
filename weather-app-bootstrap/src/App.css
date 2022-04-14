@@ -1,1 +1,14 @@
+.start-bar {
+    border-bottom: 1px solid rgb(33, 37, 41);
+    border-radius: 5px;
+    margin-top: 0.2%;
+}
+.start-bar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5%;
+    font-size: 1rem;
+    font-weight: 500;
+}
 

@@ -1,42 +1,44 @@
 import{useState, useRef} from "react"
-import WeatherItem from "../../views/WeatherItem";
-import { Form, Button } from "react-bootstrap"
+import Search from "../../views/SearchWeather"
+import { Form } from "react-bootstrap"
 
 const API_KEY = "4d717a42ee8e57d713be619959ce81c6"
 
 // Search component
-const Search = () => {
+const SearchBar = () => {
 
-    const searchValue = useRef()
+    const searchValue = useRef();
 
-    const [searchWeather, setSearchWeather] = useState({ name: "", weather: "", main: "", sys: "", timezone: "" });
+    const [searchWeather, setSearchWeather] = useState("");
 
-    const getSearchItem = () => {
+    const getSearchWeather = (e) => {
 
-        // Hämtar värdet från textboxen (namn på stad)
-        let city = searchValue.current.value;
+        if(e.keyCode === 13)
+        {
+            console.log("Du klickade enter")
 
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric$&appid=${API_KEY}`
+            let city = searchValue.current.value;
 
-        fetch(url).then(response => response.json()).then(data => {
+            let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric$&appid=${API_KEY}`
 
-            console.log(data);
+            fetch(url).then(response => response.json()).then(data => {
 
-            setSearchWeather(data);
-            
-        }, []);
+                console.log(data);
+
+                setSearchWeather(data);
+                
+            }, []);
+        }
+
     };
-
-    
 
     return(
     <>
-        <Form className="m-5">
-            <Form.Control onKeyDown={getSearchItem} style={{width: 350}} ref={searchValue} type="text" placeholder="City name" />     
-            <WeatherItem item={searchWeather} />     
-        </Form>
+        <Form.Control onKeyUp={getSearchWeather} ref={searchValue} type="text" placeholder="Enter a city name" /> 
+
+        {/* <Search item={searchWeather}/> */}
     </>
     );
 };
 
-export default Search;
+export default SearchBar;

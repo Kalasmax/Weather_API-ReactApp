@@ -1,3 +1,4 @@
+/* Removes the ability to highlight text */
 * {
     -webkit-touch-callout: none;
     -webkit-user-select: none; 
@@ -7,21 +8,24 @@
             user-select: none; 
 }
 
+/* StartBar with weather info about Stockholm */
 .start-bar {
-    border-bottom: 1px solid lightgray;
-    border-radius: 5px;
+    border-bottom: 0.2rem solid lightgray;
+    border-radius: 0.2rem;
     cursor:default;
     background-color: white;
+    display: flex;
+    height: 2.97rem;
+    opacity: 87.5%;
 }
 .start-bar-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5.6rem;
+    flex: 1 0;
     font-size: 1rem;
     font-weight: 500;
+    margin-left: 5.5rem;
 }
 
+/* Container for the content */
 body {
     background-image: url("https://picsum.photos/1280/720");
     background-repeat: no-repeat;
@@ -30,20 +34,46 @@ body {
     background-position-y: 100px;
 }
 .container {
+    max-width: 100% !important;
     height: 100%;
-    width: 100%;
-
-   
 }
-input{
+
+/* SearchBar */
+input {
     width: 15rem !important;
     text-align: center;
-    margin: 3.5rem auto 0 auto !important;
+    margin: 4rem auto 0 auto !important;
+    opacity: 90%;
+    border-radius: 7.5px !important;
+}
+input:focus{
+    opacity: 100%;
+}
+input:hover{
+    opacity: 100%;
 }
 
 
 
+/* Forecast cards */
+.card-group {
+    margin: 3.5rem;
+    
+}
+.card {
+    height: 475px;
+    align-items: center;
+    border: 0.12rem solid lightgray !important;
+    border-radius: 10px !important;
+    opacity: 93%;
+}
+.card:hover{
+    opacity: 100%;
+}
 
+
+
+/* Self explainatory but yeah - footer */
 footer {
     position: fixed;
     left: 0;

@@ -1,7 +1,8 @@
 #font-link {
   font-family: 'Press Start 2P', cursive;
   font-size: 1.6rem;
-  animation: color-change 5s infinite;
+  animation: color-change 7.5s infinite;
+  text-shadow: 1px 2px #ff3300;
 }
 
 @keyframes color-change {

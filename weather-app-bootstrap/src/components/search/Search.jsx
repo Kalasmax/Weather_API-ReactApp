@@ -13,8 +13,8 @@ const SearchBar = () => {
     const [result, setResult] = useState("null");
     const [city, setCity] = useState("");
 
+    // Unnecessary to handle the input this way (tried out Google's API stuff)
     const [input, setInput] = useState({search_val: ""})
-
     const handle = (e) => {
         const newinput={...input}
         newinput[e.target.id] = e.target.value

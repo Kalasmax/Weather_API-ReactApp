@@ -1,12 +1,13 @@
 import { Card } from "react-bootstrap"
+import "./Card.css"
 
-import cityIcon from "../../styles/images/city.png"
-import tempIcon from "../../styles/images/temp.png"
-import tempMinIcon from "../../styles/images/mintemp.png"
-import tempMaxIcon from "../../styles/images/maxtemp.png"
-import calendarIcon from "../../styles/images/calendar.png"
-import sunriseIcon from "../../styles/images/sunrise.png"
-import sunsetIcon from "../../styles/images/sunset.png"
+import cityIcon from "../../assets/images/city.png"
+import tempIcon from "../../assets/images/temp.png"
+import tempMinIcon from "../../assets/images/mintemp.png"
+import tempMaxIcon from "../../assets/images/maxtemp.png"
+import calendarIcon from "../../assets/images/calendar.png"
+import sunriseIcon from "../../assets/images/sunrise.png"
+import sunsetIcon from "../../assets/images/sunset.png"
 
 
 

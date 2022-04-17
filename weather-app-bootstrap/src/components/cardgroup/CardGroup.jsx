@@ -1,5 +1,6 @@
 import WeatherCard from "../card/Card"
 import { CardGroup } from "react-bootstrap"
+import "./CardGroup.css"
 
 const WeatherGroup = ({item}) => {
 

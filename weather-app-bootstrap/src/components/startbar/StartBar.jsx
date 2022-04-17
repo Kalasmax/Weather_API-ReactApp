@@ -1,8 +1,10 @@
-import cityIcon from "../../styles/images/city.png"
-import tempIcon from "../../styles/images/temp.png"
-import calendarIcon from "../../styles/images/calendar.png"
-import sunriseIcon from "../../styles/images/sunrise.png"
-import sunsetIcon from "../../styles/images/sunset.png"
+import "./StartBar.css"
+
+import cityIcon from "../../assets/images/city.png"
+import tempIcon from "../../assets/images/temp.png"
+import calendarIcon from "../../assets/images/calendar.png"
+import sunriseIcon from "../../assets/images/sunrise.png"
+import sunsetIcon from "../../assets/images/sunset.png"
 
 // I PARAMETERN: 
 // props för hela objektet (props.item) // eller {item} för att ta ut en property från objektet direkt (typkänsligt)

@@ -8,101 +8,11 @@
             user-select: none; 
 }
 
-/* StartBar with weather info about Stockholm
-.start-bar {
-    border-bottom: 0.2rem solid lightgray;
-    border-radius: 0 0 5px 5px;
-    cursor:default;
-    background-color: white;
-    display: flex;
-    height: fit-content;
-    opacity: 90%;
-    align-content: center;
-}
-.start-bar:hover {
-    opacity: 97.5%;
-}
-.start-bar-item {
-    display: inline;
-    flex: 1 0;
-    font-weight: 500;
-    text-align: center;
-    height: 3rem;
-    max-height: 4rem;
-    word-break: break-all;
-    overflow: hidden;
-} */
-
-
-/* Container for the content */
+/* Sets background image for the body */
 body {
     background-image: url("https://picsum.photos/1920/1080");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
 }
-.container {
-    max-width: 100% !important;
-    height: 100%;
-}
-
-/* SearchBar */
-/* input {
-    width: 15rem !important;
-    text-align: center;
-    margin: 4rem auto 0 auto !important;
-    opacity: 90%;
-    border-radius: 7.5px !important;
-}
-input:focus{
-    opacity: 97.5%;
-}
-input:hover{
-    opacity: 97.5%;
-} */
-
-
-/* Forecast cards */
-/* .card-group {
-    max-height:fit-content;
-    margin: 5rem;
-}
-.card {
-    height: 30rem;
-    width: fit-content !important;
-
-    align-items: center;
-    text-align: center;
-
-    border: 1px solid lightgray !important;
-    border-radius: 10px !important;
-    
-    opacity: 95%;
-
-    font-weight: 500;
-    font-size: 18px;
-    margin: 3rem;
-    padding: 1rem;
-
-
-}
-.card:hover{
-    opacity: 100%;
-} */
-
-
-
-/* Self explainatory but yeah - footer */
-/* footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 22px;
-    background-color: rgb(33, 37, 41);
-    color: white;
-    text-align: right;
-    font-size: 0.75rem;
-    padding-right: 1rem;
-} */
 

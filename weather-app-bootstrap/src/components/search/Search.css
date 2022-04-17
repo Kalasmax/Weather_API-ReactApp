@@ -1,10 +1,14 @@
 /* SearchBar */
-input {
+.search-bar {
     width: 15rem !important;
-    text-align: center;
-    margin: 4rem auto 0 auto !important;
-    opacity: 90%;
+    margin: 5rem auto 0 auto !important;
     border-radius: 7.5px !important;
+
+    text-align: center;
+
+    font-weight: 500 !important;
+
+    opacity: 90%;
 }
 input:focus{
     opacity: 97.5%;

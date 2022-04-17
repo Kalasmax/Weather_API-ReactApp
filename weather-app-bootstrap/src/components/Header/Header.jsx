@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react"
 import { Navbar } from "react-bootstrap"
+import "./Header.css"
 import logo from "../../assets/images/icon-nav.jpg"
 
 import StartBar from "../startbar/StartBar"
@@ -31,7 +32,7 @@ const Header = () => {
     return(
     <>
         <Navbar bg="dark" variant="dark">
-            <Navbar.Brand className="" href="/">
+            <Navbar.Brand href="/">
                 <img
                     alt="theWeatherGuru logo"
                     src={logo}

@@ -1,5 +1,19 @@
 /* CardGroup containing daily/forecast Cards */
 .card-group {
-    max-height:fit-content;
+    max-height: fit-content;
+    justify-items: center;
     margin: 5rem;
+}
+
+.card a {
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 2.5rem;
+
+    
+    text-shadow: -1.5px 1.5px 0 rgba(200, 200, 200, 0.322), -1px -1px 0 rgba(160, 160, 160, 0.288), -0.5px 2px 0 rgb(160, 160, 160), 2px 3px 0 rgb(69, 69, 69);
+}
+.card a:hover {
+    color: white;
 }

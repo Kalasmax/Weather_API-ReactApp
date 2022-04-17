@@ -1,19 +1,26 @@
-import{useState, useRef} from "react"
+import {useState, useRef} from "react"
 import { Form } from "react-bootstrap"
 import "./Search.css";
 
-import WeatherGroup from "../cardgroup/CardGroup"
-
+import CardGroup from "../cardgroup/CardGroup"
 
 const API_KEY = "4d717a42ee8e57d713be619959ce81c6"
 
-// Search component
 const SearchBar = () => {
 
     const searchValue = useRef();
 
-    const [searchWeather, setSearchWeather] = useState("null");
-     
+    const [result, setResult] = useState("null");
+    const [city, setCity] = useState("");
+
+    const [input, setInput] = useState({search_val: ""})
+
+    const handle = (e) => {
+        const newinput={...input}
+        newinput[e.target.id] = e.target.value
+        setInput(newinput)
+    }
+
     const getSearchWeather = (e) => {
 
         if(e.keyCode === 13)
@@ -26,38 +33,58 @@ const SearchBar = () => {
             fetch(url)
             .then(response => response.json())
             .then(data => {
-                
-                // const{timezone_offset, daily} = data;
-                console.log("Första fetchen")
-                console.log(data);
+
+                setCity(data.city.name)
 
                 fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.city.coord.lat}&lon=${data.city.coord.lon}&exclude=current,minutely,hourly,alerts&units=metric&appid=${API_KEY}`)
                 .then(response => response.json())
-                .then(data => { 
-                    
-                    // const{timezone_offset, daily} = data;
-                    // let item = {Timezone_offset: timezone_offset, Daily: daily};      
-                    setSearchWeather(data)
-
-                    console.log("Andra fetchen")
-                    console.log(data);
-                
-                })
+                .then(data => {setResult(data)})
 
             }, []);
         }
 
     };
 
-    
-
     return(
     <>
-        <Form.Control id="search-bar" onKeyUp={getSearchWeather} ref={searchValue} type="text" placeholder="Enter a city name" /> 
-
-        <WeatherGroup item={searchWeather}/>
-    </>
-    );
+        <Form.Control className="search-bar" type="text" placeholder="Enter a city name"
+        onKeyUp={getSearchWeather} 
+        ref={searchValue} 
+        onChange={(e)=>handle(e)}
+        value={input.search_val}
+        id="search_val"/>
+         
+        <CardGroup item={[{result}, {city}]}/>
+    </>);
 };
 
 export default SearchBar;
+
+/* GOOGLE API TEST
+
+import Autocomplete from "react-google-autocomplete";
+const API_KEY2 = "AIzaSyCpO16j7Jh5gWxzCQvjFLPRA6j_c1UKF9k"
+
+
+fetch(`https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${newinput}&types=(cities)&key=${API_KEY2}`, {
+    method: "GET",
+    mode: "no-cors",
+    cache: "no-cache",
+    credentials: 'same-origin',
+    headers: {
+        "Content-Type": "application/json"
+    },
+redirect: "follow",
+referrerPolicy: "no-referrer",
+}); 
+
+
+fetch(`https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${newinput}&types=(cities)&key=${API_KEY2}`, {
+    mode: "no-cors",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    referrerPolicy: "no-referrer",
+})
+.then(response => console.log(response))
+*/

@@ -1,42 +1,32 @@
 import WeatherCard from "../card/Card"
-import { CardGroup } from "react-bootstrap"
+import { Card, CardGroup } from "react-bootstrap"
 import "./CardGroup.css"
 
 const WeatherGroup = ({item}) => {
 
-    console.log("Inne i WeatherGroup");
-    console.log(item);
-
-    if(item === "null")
+    if(item[0].result !== "null")
     {
-        console.log("Inne i IF satsen");
-        console.log(item);
-    }
-    else
-    {
-        console.log("Inne i ELSE satsen");
-        console.log(item);
+        var cityName = item[1].city;
 
-        var list = item.daily.slice(0, 5).map(element => {
+        var list = item[0].result.daily.slice(0, 5).map(element => {
             
             return (<WeatherCard item={element}></WeatherCard>)
-
         });
-
-        console.log("MAPPAD LISTA");
-        console.log(list)
     }
     
     return(
     <>
-        <CardGroup className="mt-5"> 
-            {/* {item.daily ? <h1>{item}</h1> : null} */}
+        <Card className="city-card">
+            <Card.Text>
+                <a href={"https://en.wikipedia.org/wiki/" + cityName} target="_blank" rel="noopener noreferrer" tooltip="swag">
+                    {cityName}
+                </a> 
+            </Card.Text>
+        </Card>
+        <CardGroup>
             {list}            
         </CardGroup>  
-    </>
-    )
-
+    </>)
 }
 
 export default WeatherGroup;
-

@@ -1,0 +1,45 @@
+/* Brand image animation on load and hover */
+#brand-img {
+    margin-left: 2%;
+    animation: spin-icon 5s infinite;
+  }
+  @keyframes spin-icon {
+    50% { transform: rotate(7.5deg); }
+    100% { transform: rotate(-7.5deg); }
+  }
+  
+  #brand-img:hover {
+    animation: in 1s normal forwards ease-in-out;
+  }
+  #brand-img:not(:hover) {
+    animation: out 0.5s normal forwards ease-in-out;
+  }
+  @keyframes in {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(-360deg); }
+  }
+  @keyframes out {
+    0% { transform: rotate(-360deg);}
+    100% { transform: rotate(0deg); }
+  }
+  
+  /* Brand title animation that changes color infinitely  */
+  #brand-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.6rem;
+    animation: color-change 60s infinite;
+    text-shadow: 1px 2px #ff3300;
+    margin-bottom: 0.75rem !important;
+  }
+  @keyframes color-change {
+    0% { color: rgb(41, 19, 235); }
+    11.1% { color: rgb(99, 4, 239); }
+    22.2% { color: rgb(175, 3, 244); }
+    33.3% { color: rgb(239, 4, 161); }
+    44.4% { color: rgb(255, 72, 17); }
+    55.5% { color: rgb(252, 215, 47); }
+    66.6% { color: rgb(255, 72, 17); }
+    77.7% { color: rgb(239, 4, 161); }
+    88.8% { color: rgb(175, 3, 244); }
+    100% { color: rgb(99, 4, 239); }
+  }

@@ -1,23 +1,49 @@
+.city-card {
+    width: fit-content;
+    margin: 5rem auto -5rem auto;
+
+    text-align: center;
+    font-size: 1.7rem !important;
+    font-weight: 500;
+    background-color: transparent !important; 
+    border: none !important;
+
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
 /* Card containing daily/forecast weather data */
-.card {
-    height: 30rem;
+.weather-card {
+    min-height: 400px;
+    height: fit-content;
+    min-width: 220px !important;
     width: fit-content !important;
+    margin: 0 3rem;
+    padding: 0;
 
     align-items: center;
     text-align: center;
 
-    border: 1px solid lightgray !important;
+    border: 2px outset lightgray !important;
     border-radius: 10px !important;
     
-    opacity: 95%;
-
     font-weight: 500;
     font-size: 18px;
-    margin: 3rem;
-    padding: 1rem;
 
-
+    opacity: 95%;
 }
-.card:hover{
+
+.weather-card:hover{
     opacity: 100%;
+}
+
+.card-main-icon {
+    margin: 1.2rem;
+    width: 37.5% !important;
+}
+
+.card-icon {
+    width: 35px;
 }

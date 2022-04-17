@@ -1,7 +1,9 @@
 import {useState, useEffect} from "react"
 import { Navbar } from "react-bootstrap"
-import logo from "../../images/icon-nav.jpg"
-import Start from "../../views/StartWeather"
+import "./Header.css";
+import logo from "../../styles/images/icon-nav.jpg"
+
+import Start from "./StartWeather"
 
 const API_KEY = "4d717a42ee8e57d713be619959ce81c6"
 const startCity = "Stockholm"
@@ -30,14 +32,15 @@ const Header = () => {
     return(
     <>
         <Navbar bg="dark" variant="dark">
-            <Navbar.Brand className="m-2" href="/">
+            <Navbar.Brand className="" href="/">
                 <img
                     alt="theWeatherGuru logo"
                     src={logo}
-                    width="60"
+                    width="65"
                     height="60"
-                    className="d-inline-block align-top"
-                />{''}
+                    className="d-inline-block align-center"
+                    id="font-logo"
+                />
                 <h2 className="m-2 d-inline-block align-bottom" id="font-link">theWeatherGuru</h2>
             </Navbar.Brand>               
         </Navbar>

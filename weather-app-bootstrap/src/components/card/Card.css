@@ -1,0 +1,23 @@
+/* Card containing daily/forecast weather data */
+.card {
+    height: 30rem;
+    width: fit-content !important;
+
+    align-items: center;
+    text-align: center;
+
+    border: 1px solid lightgray !important;
+    border-radius: 10px !important;
+    
+    opacity: 95%;
+
+    font-weight: 500;
+    font-size: 18px;
+    margin: 3rem;
+    padding: 1rem;
+
+
+}
+.card:hover{
+    opacity: 100%;
+}

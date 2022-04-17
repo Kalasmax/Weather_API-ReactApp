@@ -1,0 +1,5 @@
+/* CardGroup containing daily/forecast Cards */
+.card-group {
+    max-height:fit-content;
+    margin: 5rem;
+}

@@ -1,0 +1,14 @@
+/* SearchBar */
+input {
+    width: 15rem !important;
+    text-align: center;
+    margin: 4rem auto 0 auto !important;
+    opacity: 90%;
+    border-radius: 7.5px !important;
+}
+input:focus{
+    opacity: 97.5%;
+}
+input:hover{
+    opacity: 97.5%;
+}

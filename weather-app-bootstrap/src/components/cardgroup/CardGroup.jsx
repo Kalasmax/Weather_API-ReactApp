@@ -6,9 +6,9 @@ const WeatherGroup = ({item}) => {
 
     if(item[0].result !== "null")
     {
-        var cityName = item[1].city;
+        var cityName = item[1].city[0];
 
-        var list = item[0].result.daily.slice(0, 5).map(element => {
+        var list = item[0].result.daily.slice(0, 6).map(element => {
             
             return (<WeatherCard item={element}></WeatherCard>)
         });

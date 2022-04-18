@@ -21,14 +21,15 @@ const WeatherCard = ({item}) => {
                     <Card.Text>
                         <img src={calendarIcon} className="card-icon" alt="icon"/> {new Date((item.dt) * 1000).toString().slice(0, 21) }
                     </Card.Text>
-                    <hr/>
-                    <Card.Text className="temp">                     
+
+                    {/* <hr/> */}
+                    {/* <Card.Text className="temp">                     
                     <small className="text-muted"> now ── min ── max </small>           
-                    </Card.Text> 
-                    <Card.Text className="temp">                     
-                        <img src={tempIcon} className="card-icon" alt="icon"/>{Math.floor(item.temp.day)}°C 
-                        <img src={tempMinIcon} className="card-icon" alt="icon"/>{Math.floor(item.temp.min)}°C
-                        <img src={tempMaxIcon} className="card-icon" alt="icon"/>{Math.floor(item.temp.max)}°C
+                    </Card.Text>  */}
+                    <Card.Text className="temp">      
+                        <p><img src={tempIcon} className="card-icon-big" alt="icon"/>{Math.floor(item.temp.day)}°C</p>
+                        <p><img src={tempMinIcon} className="card-icon-big" alt="icon"/>{Math.floor(item.temp.min)}°C</p>
+                        <p><img src={tempMaxIcon} className="card-icon-big" alt="icon"/>{Math.floor(item.temp.max)}°C</p>                               
                     </Card.Text> 
                     <Card.Text>
                         <small className="text-muted">

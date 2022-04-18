@@ -26,3 +26,29 @@
 .start-bar-icon {
     width: 55px;
 }
+
+.start-bar-dropdown {
+    display: inline;
+    flex: 1 0;
+
+    text-align: center;
+
+    height: inherit;
+    max-height: inherit;
+}
+
+#dropdown-basic {
+    background-color: white;
+    color: rgb(49, 53 ,56) !important;
+    font-weight: 500;
+    
+    border: none !important;
+    box-shadow: none !important;
+
+    padding: 0 !important; 
+} 
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+ }

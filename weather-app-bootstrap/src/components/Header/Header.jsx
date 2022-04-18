@@ -19,11 +19,9 @@ const Header = () => {
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${startCity}&units=metric&appid=${API_KEY}`
 
         fetch(url).then(response => response.json()).then(data => {setStartWeather(data)});
-        console.log("start")
 
         const interval = setInterval(() => {
             fetch(url).then(response => response.json()).then(data => {setStartWeather(data)});
-            console.log("uppdatering per sekund")
         }, 1000);  
         return () => clearInterval(interval);
 

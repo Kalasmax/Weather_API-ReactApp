@@ -41,9 +41,12 @@
 
 .card-main-icon {
     margin: 1.2rem;
-    width: 37.5% !important;
+    width: 40% !important;
 }
 
 .card-icon {
     width: 35px;
+}
+.card-icon-big {
+    width: 50px;
 }

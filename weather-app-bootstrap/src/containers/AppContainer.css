@@ -3,3 +3,21 @@
     max-width: 100% !important;
     height: 100%;
 }
+
+.toast-header {
+    height: 1.5rem !important;
+    overflow: hidden;
+}
+.btn-close {
+    width: 5px !important;
+    height: 5px !important;
+}
+.toast-body {
+    text-align: center;
+    height: 4.2rem !important;
+}
+.toast {
+    float:left;
+    margin: -10px 0px 0px 5px;
+    width: 17.5% !important;
+} 

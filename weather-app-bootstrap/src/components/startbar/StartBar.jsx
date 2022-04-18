@@ -1,28 +1,57 @@
+import { useContext } from "react"
+import { WeatherContext } from "../../contexts/WeatherContext"
+import { Dropdown } from "react-bootstrap"
 import "./StartBar.css"
 
 import cityIcon from "../../assets/images/city.png"
 import tempIcon from "../../assets/images/temp.png"
+import tempMinIcon from "../../assets/images/mintemp.png"
+import tempMaxIcon from "../../assets/images/maxtemp.png"
 import calendarIcon from "../../assets/images/calendar.png"
 import sunriseIcon from "../../assets/images/sunrise.png"
 import sunsetIcon from "../../assets/images/sunset.png"
 
-// En startdel av sidan som visar vädret i Stockholm aktuell dag. 
-// Följande data skall finnas med Aktuell plats, temperatur, datum och tid
-
 const StartWeather = ({item}) => {
+
+        const{getWeather} = useContext(WeatherContext);
+
         return(
         <> 
                 <ul className="start-bar">
+                        
                         {item.name ? 
-                                <li className="start-bar-item">
+                        
+                                <li onClick={() => getWeather("Stockholm")} className="start-bar-item" style={{cursor: "pointer"}}>
                                         <img src={cityIcon} className="start-bar-icon" alt="icon"/>
                                         {item.name}
                                 </li>: null}
-                        {item.main ? 
-                                <li className="start-bar-item">
-                                        <img src={tempIcon} className="start-bar-icon" alt="icon"/>
-                                        {Math.floor(item.main.temp)}°C
-                                </li>: null}
+
+                        {item.main ?
+                                <li className="start-bar-dropdown">               
+                                <Dropdown >
+                                        <Dropdown.Toggle className="start-bar-item" id="dropdown-basic">
+                                                <img src={tempIcon} className="start-bar-icon" alt="icon"/>
+                                                {Math.floor(item.main.temp)}°C
+                                        </Dropdown.Toggle>
+                                        <Dropdown.Menu>
+                                                <Dropdown.Item>
+                                                {item.main ?                          
+                                                        <li className="start-bar-item">
+                                                                <img src={tempMinIcon} className="start-bar-icon" alt="icon"/>
+                                                                {Math.floor(item.main.temp)}°C
+                                                        </li>: null}
+                                                </Dropdown.Item>
+                                                <Dropdown.Item>
+                                                {item.main ?                          
+                                                        <li className="start-bar-item">
+                                                                <img src={tempMaxIcon} className="start-bar-icon" alt="icon"/>
+                                                                {Math.floor(item.main.temp)}°C
+                                                        </li>: null}
+                                                </Dropdown.Item>
+                                        </Dropdown.Menu>
+                                </Dropdown>
+                        </li>: null}
+
                         {item.sys ? 
                                 <li className="start-bar-item">
                                 <img src={calendarIcon} className="start-bar-icon" alt="icon"/>

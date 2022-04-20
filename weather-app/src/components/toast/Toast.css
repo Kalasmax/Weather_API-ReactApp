@@ -1,11 +1,6 @@
-/* Container for the components */
-.container {
-    max-width: 100% !important;
-    height: 100%;
-}
-
 .toast-header {
     height: 1.5rem !important;
+
     overflow: hidden;
 }
 .btn-close {
@@ -15,6 +10,7 @@
 .toast-body {
     text-align: center;
     height: 4.2rem !important;
+    overflow: hidden;
 }
 .toast {
     float:left;

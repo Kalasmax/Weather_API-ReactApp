@@ -10,8 +10,20 @@
 
 }
 
+.card small {
+    font-size: 0.9rem;
+}
 .card-body {
     padding: 0 !important;
+} 
+.card-date {
+    font-size: 1.1rem;
+}
+.card-temp p {
+    font-size: 2.5rem;
+}
+.card-temp small{
+    font-size: 0.8rem;
 }
 
 /* Card containing daily/forecast weather data */
@@ -26,11 +38,14 @@
     align-items: center;
     text-align: center;
 
-    border: 2px outset lightgray !important;
-    border-radius: 10px !important;
-    
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.2rem;
+    
+    border-radius: 10px !important;
+    backdrop-filter: blur(20px) !important;
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0,25) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
 
     opacity: 95%;
 }
@@ -40,13 +55,14 @@
 }
 
 .card-main-icon {
-    margin: 1.2rem;
-    width: 40% !important;
+    opacity: 100% !important;
+    margin: 0.5rem;
+    width: 47.5% !important;
 }
 
 .card-icon {
     width: 35px;
 }
 .card-icon-big {
-    width: 50px;
+    width: 47.5px;
 }

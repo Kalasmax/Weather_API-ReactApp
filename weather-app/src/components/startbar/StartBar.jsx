@@ -38,14 +38,14 @@ const StartWeather = ({item}) => {
                                                 {item.main ?                          
                                                         <li className="start-bar-item">
                                                                 <img src={tempMinIcon} className="start-bar-icon" alt="icon"/>
-                                                                {Math.floor(item.main.temp)}°C
+                                                                {Math.floor(item.main.temp_min)}°C
                                                         </li>: null}
                                                 </Dropdown.Item>
                                                 <Dropdown.Item>
                                                 {item.main ?                          
                                                         <li className="start-bar-item">
                                                                 <img src={tempMaxIcon} className="start-bar-icon" alt="icon"/>
-                                                                {Math.floor(item.main.temp)}°C
+                                                                {Math.floor(item.main.temp_max)}°C
                                                         </li>: null}
                                                 </Dropdown.Item>
                                         </Dropdown.Menu>

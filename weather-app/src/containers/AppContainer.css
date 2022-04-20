@@ -1,0 +1,6 @@
+/* Container for the components */
+.container {
+    max-width: 100% !important;
+    height: 100%;
+}
+

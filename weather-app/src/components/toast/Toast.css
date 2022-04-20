@@ -9,11 +9,11 @@
 }
 .toast-body {
     text-align: center;
-    height: 4.2rem !important;
-    overflow: hidden;
+    height: fit-content;
+    /* overflow: hidden; */
 }
 .toast {
     float:left;
-    margin: -10px 0px 0px 5px;
+    margin: -14.5px 0px 0px 2.5px;
     width: 17.5% !important;
 } 

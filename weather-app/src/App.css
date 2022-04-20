@@ -10,9 +10,10 @@
 
 /* Sets background image for the body */
 body {
-    background-image: url("https://picsum.photos/1920/1080");
+    background-image: url("https://picsum.photos/3840/2160");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    
+    /* background-position: top; */
 }
 

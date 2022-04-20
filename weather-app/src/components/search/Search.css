@@ -1,7 +1,9 @@
 /* SearchBar */
 .search-bar {
-    width: 15rem !important;
-    margin: 7rem auto 0 auto !important;
+    float: none;
+
+    width: 13.5% !important;
+    margin: 4% 43.5% 0px 43.5% !important;
     border-radius: 7.5px !important;
 
     text-align: center;

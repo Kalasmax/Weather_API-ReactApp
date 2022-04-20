@@ -18,7 +18,7 @@ const WeatherGroup = ({item}) => {
     <>
         <Card className="city-card">
             <Card.Text>
-                <a href={"https://en.wikipedia.org/wiki/" + cityName} target="_blank" rel="noopener noreferrer" tooltip="swag">
+                <a href={"https://en.wikipedia.org/wiki/" + cityName} target="_blank" rel="noopener noreferrer">
                     {cityName}
                 </a> 
             </Card.Text>

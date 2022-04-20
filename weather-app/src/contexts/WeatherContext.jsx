@@ -32,7 +32,6 @@ const WeatherProvider = (props) => {
         <WeatherContext.Provider value={{result, city, getWeather}}>
             {props.children}
         </WeatherContext.Provider>
-
         <CardGroup item={[{result}, {city}]}/>
     </>);
 };
